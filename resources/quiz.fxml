@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="402.0" prefWidth="450.0" style="-fx-background-color: #3e5c74;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizapp.QuizController">
+    <VBox alignment="CENTER" layoutX="45.0" layoutY="25.0" prefHeight="196.0" prefWidth="360.0" spacing="5" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="25.0">
+        <Label fx:id="questionLabel" prefHeight="40.0" prefWidth="295.0" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="option1" prefWidth="300.0" text="Option 1" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="optionGroup" />
+            </toggleGroup>
+            <font>
+                <Font name="Calibri" size="15.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="option2" prefHeight="26.0" prefWidth="300.0" text="Option 2" textFill="WHITE" toggleGroup="$optionGroup">
+            <font>
+                <Font name="Calibri" size="15.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="option3" prefHeight="26.0" prefWidth="300.0" text="Option 3" textFill="WHITE" toggleGroup="$optionGroup">
+            <font>
+                <Font name="Calibri" size="15.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="option4" prefHeight="26.0" prefWidth="300.0" text="Option 4" textFill="WHITE" toggleGroup="$optionGroup">
+            <font>
+                <Font name="Calibri" size="15.0" />
+            </font>
+        </RadioButton>
+    </VBox>
+   <VBox alignment="CENTER" layoutX="151.0" layoutY="112.0" prefHeight="179.0" prefWidth="131.0" spacing="5">
+      <children>
+         <Button fx:id="mainMenuButton" onAction="#handleMainMenuAction" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4083be;" text="মেইন মেনু" visible="false">
+            <font>
+               <Font name="Calibri Bold" size="15.0" />
+            </font>
+         </Button>
+         <Button fx:id="logoutButton" onAction="#handleLogoutAction" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4083be;" text="লগ আউট" visible="false">
+            <font>
+               <Font name="Calibri Bold" size="15.0" />
+            </font>
+         </Button>
+         <Button fx:id="exitButton" onAction="#handleExitAction" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #4083be;" text="বাহির" visible="false">
+            <font>
+               <Font name="Calibri Bold" size="15.0" />
+            </font>
+         </Button>
+         <Button fx:id="nextButton" onAction="#handleNextAction" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #4083be;" text="পরবর্তী">
+            <font>
+               <Font name="Calibri Bold" size="15.0" />
+            </font>
+         </Button>
+      </children>
+   </VBox>
+</AnchorPane>
